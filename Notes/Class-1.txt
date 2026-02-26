@@ -1,0 +1,5 @@
+1. Whats the reason of naming the .js?
+-- Certain programming languages have vertain way of identifying the code, and the type of language that a file would be required to read. 
+-- The Software of that is able to read javascript is Node.js. Its an environement that is able to execute the JavaScript code on RUNTIME.
+-- Node.js and Dino.js (LTS is Longterm support andfor production) and Current
+-- 
