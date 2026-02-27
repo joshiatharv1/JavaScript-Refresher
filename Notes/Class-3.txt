@@ -1,0 +1,62 @@
+MEMORY ALLOCATION IN JAVASCRIPT
+1. Stack and heap Memory 
+Stack: Primitives are used to store in stack. 
+Heap :Non Primitivees are storeed here. 
+
+2. Strings
+-- 3 Ways to Enter value in String variables, "" , '', ``(Back -tick)
+-- String Interpolation
+-- const gameName=new String("AthrvJoshi")
+-- gameName.charAt(2), gameName.indexOf('t'), Methods like substring(Start, End) and slice(-8, 4) return a new String 
+-- trim(), replace("Value_to_change", "New_Value")
+-- includes("Value") --> Returns true
+
+3. Numbers and Maths: 
+-- const balance=new Number(100) A more strict way of checking if the number exists.
+
+4. Date: new Date()
+
+5. Arrays: 
+-- Indexed from 0
+-- Copy Types in Java
+    Reference Copy – No new object created. Both variables point to the same object in Heap.
+    Car a = new Car(); Car b = a; → a and b are the same object
+    
+    Shallow Copy – New object IS created, but inner objects (like Engine) are still shared.
+    Change b.engine.power → affects a.engine.power too.
+    Car myNewCar = new Car();
+    Car myNewOtherCar = myNewCar.clone(); // NEW object, but...
+
+
+    Deep Copy – New object created AND all inner objects are also fully copied. Nothing is shared.
+    Change anything in b → a is completely unaffected
+
+    Reference Copy → Same object, two names
+    Shallow Copy → New object, but shared insides
+    Deep Copy → Fully independent clone
+
+-- Splice and Slice Difference
+   Slice will print from (Start, End) and not affect the original array and return frmo start to end - 1
+   Splice will Print from (Start, End) and print the end as well. Exception here that the array will be transformed here. 
+
+-- More funcitons like include, indexOf(element), join is used to join two different arrays such that when joined they return a string that
+   contains both the arrays. 
+
+-- Shift and unShift will move the values up and down when we add a new elements. Example use case in To-Do List. A Costly Procedure overall. 
+   Shift removes the FIRST element and moves up the other elements. 
+   UnShift Adds new elements to the beggining of the array and moves the rest towards the end. 
+
+-- Prototype Chaining is very powerful. 
+
+-- Differce between Array1.push(Array2) and Concat
+   Array1.push(Array2) add the Array2 as the last element in the exisitng element. 
+   Concat is the merging of both the arrays, so instead of the above issues after the last index of first array the elements of second array are added. 
+   Concat needs to return a new value
+   myArray3=[...Array1, ...Array2]
+
+-- Important Mehtods like Array.isArray(), Array.from(), Array.flat()
+    console.log(Array.from("Atharv")) --> ['A', 'T', 'H']
+    console.log(Array.from({name:"Atharv"})) --> [] This cannot be converted to Array, you need to specify whether to flat key or value. 
+    Array.of(Element1, element2, element3)
+
+-- 

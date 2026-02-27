@@ -1,0 +1,24 @@
+1. Conversion of Datatypes
+-- When the data coming from an external source like API or an function 
+// "33" => Converted to Number is 33
+// "33abc" => Converted to Number is NaN(Not a Number)
+// "33abc" => Converted to Boolean is True
+// "" => converted to false as empty String
+
+2. Console.log("1"+2+2) ==> 122
+   Console.log(1+2+"2") ==> 32
+
+3. Prefix and PostFix Operator
+
+4. Comparators in JavaScript:
+-- Working of > < == are little complex on working. 
+-- Strict checking is === this checks the datatype and value
+
+5. Datatypes : Primitive and Non-Primitive (Based on how data is kept in memory and how they are retrieved)
+-- 7 Types: String, Null, Undefined, Number, Boolean Symbol, BigInt (The  reference is copied accross the Data)
+-- Reference type(Non- Type): You can directly reference the memory here (Array, Object and Functions)
+
+6. Symbol always returns a different value even if 2 diffrent symbol variables are initialised with same value
+
+7. Return type/Datatype of the non primitive variables is also Object. 
+INTERVIEW QUESTION : TYPE OF DATATYPE OF NULL IS ALSO OBJECT

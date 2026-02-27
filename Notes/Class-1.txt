@@ -2,4 +2,23 @@
 -- Certain programming languages have vertain way of identifying the code, and the type of language that a file would be required to read. 
 -- The Software of that is able to read javascript is Node.js. Its an environement that is able to execute the JavaScript code on RUNTIME.
 -- Node.js and Dino.js (LTS is Longterm support andfor production) and Current
--- 
+
+2. How to run the javascript code?
+-- PS D:\Projects\Javascript-Revision> cd .\Code\
+   PS D:\Projects\Javascript-Revision\Code> node Class1.js
+   Hello World
+
+3. Variables and Datatypes: 
+-- Constants: USing the Keyword Const. Once declareed with value the value cannot change. 
+-- let and var: var is not BLOCK-SCOPED and function scope
+-- If we dont use let/var/constant we can still declare the variables. 
+-- console.log([variable1, variable2, ...])
+
+4. Use of "use strict"-- This is used to tell that this file should be executed with the new updates in Javascript
+-- Global Object is an Datatypes
+-- NNBBSSU Number, Null, Boolean, string , symbol, undefined, BigInt
+-- Null is also a value
+-- typeOf Operator
+
+5. Null is an Object and undefined is undefined.
+
