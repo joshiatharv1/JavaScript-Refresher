@@ -1,0 +1,56 @@
+1. Global and Local Scope: 
+-- Look at Class5.js
+2. Hoisting
+-- Default behaviour of Javascript to Declare and NOT INITIALISE the varibale at top
+-- For Const and Let its done automatically
+-- For Var it works but can cause bugs later
+
+3. Arrow Function :
+-- 
+
+4. This keyword works in teh Object Level and not the Funciton Level.
+-- But prints the metadata aorunf object when called inside the Object. 
+-- Arrow Fucntion difference with Normal Funciton:
+
+
+5. IIFE (Immediatley invoked function express)
+-- Uses to paranthesis ()()
+-- First () is used to define the fuction (Normal or Arrow Function)
+-- Second () is to call and pass any required paramerter to the function defined in the first ()
+-- Need: Immediatley invoked a fucntion, Protect agianst the global pollution, Eaxample in Class5.js
+
+6. Javascript Execution Flow
+-- Global Execution Context: Different for Browser and Function Execution Context. It is allocated with this keyword
+-- Memory Creation Phase: Space allocation for variables.  
+-- Execution Phase: 
+-- Sample Code: 
+
+let va1=10
+let val2=5
+function addNum(num1, num2){
+    let total=num1+num2;
+    return total;
+}
+
+let result1=addNum(va1, val2)
+let result2=addNum(5,2)
+
+-- In Memory phase: we have val1, val2 as Undefined. AddNum has the defination , Result1 and Result2 also 
+   has undefined. This is the first cycle
+-- Execution Phase: Val 1 and Val2 will be allocated the value 10 and 5. 
+   Here we reach addNum where a new Execution Environment is created. Here we get new variable environment 
+   and execetion thread. Similartyl like above we would have a seaprate Memory and Execution Phase but for th function. Here in Memory Phase we ha defined the num1, num2 and total again as undefined. In Executon phase we are getting the vlue for num1 and num2 through val1 , val2 as 10 and 5. Lastly the function retuns the addtion to the PARENT COMPONENT CALLING THE FUNCITON, which is RESULT1 and simlarly for RESULT2 
+   the values for both are returned to the global context and the separate executoin blocks are delteed. 
+
+-- CALL STACK: 
+   Like the data structure stack. Fucntion entering and going out works on the LIFO logic. 
+
+-- IMORTANT
+-- Maps and Objects: Maps are iterable through for loop and not Object. 
+-- We cannot use For of loop in Objects. We need to use For In loop.
+-- For Maps also we CANNOT USE for In loop
+
+
+-- Higher Order Funtions 
+-- For Each Loop is a method on Arrays ,it will run or each item and you can run with index. 
+-- it returns the each item, index and the array eveerytime

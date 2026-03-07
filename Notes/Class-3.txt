@@ -59,4 +59,66 @@ Heap :Non Primitivees are storeed here.
     console.log(Array.from({name:"Atharv"})) --> [] This cannot be converted to Array, you need to specify whether to flat key or value. 
     Array.of(Element1, element2, element3)
 
--- 
+-- IMPORTTANT INTERVIEW QUESTIONS: 
+1. Whats higher order funcitons?
+Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+Higher-order functions are a result of functions being first-class citizens in javascript.
+
+Examples of higher-order functions:
+function higherOrder(fn) {
+  fn();
+}
+higherOrder(function() { console.log("Hello world") });  
+function higherOrder2() {
+  return function() {
+    return "Do something";
+  }
+}      
+var x = higherOrder2();
+x()   // Returns "Do something"
+
+2. Use Strict Mode does what ?
+Duplicate arguments are not allowed by developers.
+In strict mode, you won't be able to use the JavaScript keyword as a parameter or function name.
+The 'use strict' keyword is used to define strict mode at the start of the script. Strict mode is supported by all browsers.
+Engineers will not be allowed to create global variables in 'Strict Mode.
+
+3. This keyword
+The “this” keyword refers to the object that the function is a property of.
+Since the function is invoked in the global context, the function is a property of the global object.
+Therefore, the output of the above code will be the global object. Since we ran the above code inside the browser, the global object is the window object.
+Example 2:
+
+var obj = {
+    name:  "vivek",
+    getName: function(){
+    console.log(this.name);
+  }
+}
+   
+obj.getName();
+
+-- Objects can be created Literals and Singleton and With constructor. 
+-- Nested Objects have a important concept called object chaining. 
+-- Copy/Combine multiple objects into one using Object.Assign({}, Obj1, Obj2)
+{} in the assign method at start acts as a target object. 
+-- Important methods like keys, entries, values, hasOwnProperty() converted
+-- Object Destructuting
+
+
+Global and Local Scope: 
+-- Let, var and COnst Diffference. 
+-- Scope of running the code on locally thorugh Node is different then Web Browser console. 
+
+-------------------------------------------------------------------------------
+Interview Questions.
+4. Explain call(), apply() and, bind() methods.
+
+
+5. Self Invoking Functions
+
+
+6. What is an Immediately Invoked Function in JavaScript?
+
+
+
