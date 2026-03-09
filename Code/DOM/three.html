@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Practice</title>
+</head>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+<body>
+    
+</body>
+<script>
+    const myDiv=document.createElement('div')
+    console.log(myDiv)
+    myDiv.className="main"
+    myDiv.id="myId"
+    myDiv.id=Math.random()*10+1
+    myDiv.setAttribute("title", "My Custom Title")
+    myDiv.style.backgroundColor="green"
+    myDiv.style.padding="12px"
+    // Untill here the Style and Div is only in Memory not the HTML Static Page
+    const addText=document.createTextNode("Atharv Is here !")
+    myDiv.appendChild(addText)
+    document.body.appendChild(myDiv)
+</script>
+</html>

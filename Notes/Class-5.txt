@@ -1,0 +1,32 @@
+1. Filter, Map, Reduce 
+2. Dom Manipulation
+-- Window Object: 
+-- window.document or console.dir(window)
+-- Window --> Document --> HTML
+                            -
+                            -
+                            - 
+                Head                 Body
+        title        meta
+    text-node        attribute 
+
+-- document.getElementById('firstHeading').innerHTML="<h1>Chai or Code</h1>"
+-- innerText and textContent
+-- Differrence Between innerHTML, innerText, textContent
+title.innerHTML
+'DOM LEARNING<span style="display:none;">Hidden Text Added Here</span>\n        '
+title.textContent
+'DOM LEARNINGHidden Text Added Here\n        '
+title.innerText
+'DOM LEARNING'
+
+-- Query Selector and using on UL
+-- myUl returned an Node List
+-- Node list is not similar to regular List or Array that we use in Javascript, we
+   can still loop ariunf usign forEach though. 
+-- HTMLCollections: This also returns a list but NOT AN Array
+   BUT we can still convert to an Array using Array.from (myHTMLCollections)
+
+-- Document.getQuerySelector(".someClasName") -- Using a Dot
+-- Document.getQuerySelector("#someIdClass") -- Using a Hash Symbol 
+
