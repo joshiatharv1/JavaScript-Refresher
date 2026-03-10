@@ -1,0 +1,62 @@
+1. addEventListener is more efficient and powerful, it allows propogation. 
+2. attachEvent()
+3. jQuery -- on
+4. addEventListener(e)=>{
+
+}
+Here 'e' stands for the object of the addEventListener;
+
+Event propogation: Event Public (Default behavior), Event Capturing 
+Event Propogation happens from the Child Element to the parent
+In this Example 
+document.getElementById("images").addEventListener("click", (e)=>{
+    console.log("Clicked inside the Images")
+}, false)
+document.getElementById("idImage4").addEventListener("click", (e)=>{
+    console.log("Cliked the Images 4")
+}, false)
+
+We Have added the False as the third funcitnoalitty, But if we set that to true we would get the reverse functionality when cliked on Image 4
+Clicking on Image 4:-
+Clicked inside the Images
+          -
+          -
+          v
+Cliked the Images 4
+
+Javascript is asynchrnous, and single threaded -- Default Environment. 
+Blocking and Non-Blocking Code: 
+-- Blocking Code: Block the flow of code, and read file synchrnous
+-- Non-Blocking Code: Does not stop the flow of code, Read the Aynch Flow. 
+
+User --> registers --> Enter data the database --> Once Enterd then add that to the Web API (Here Synchrnous is preffered)
+
+WebAPI - is found on the Broswer, We find here the DOM API
+Task Queue -- Promise Queue. 
+Example the Function1 wants to call the setTimeout(), this funciton is found in the WEBAPI or the NodeAPI. Once the setTimeOut is CALLED then, 
+it is REGISTERED within the Regiter CALLBACK now that function is send to the Task Queue. This follows th FIFO principle. The functin1 enter through
+the Register CallBack into the Task Queue and then sent again to the CALL Stack within the JS Engine
+
+Simliarly is the Fetch API method but it follows a differnet Queuue call the Promise Queue that is higer priority based. 
+FUNCTION1 -- calls the -- Fetch API -- Funciton1 sent to Promise Queue --->
+
+Event Loop Concept
+1. Function1 runs on the Call Stack
+2. setTimeout() is called → handed off to Web API (leaves the stack)
+3. Call Stack continues running other code (non-blocking)
+4. Timer expires → callback moved to Task Queue
+5. Event Loop checks: "Is Call Stack empty?" 
+6. If yes → pushes callback onto Call Stack
+7. Callback executes
+
+Call Stack  →  Promise Queue (Microtask)  →  Task Queue (Macrotask)
+This is why a resolved Promise will always execute before a setTimeout even if the timeout is 0ms — the Event Loop always drains the Promise Queue completely before touching the Task Queue.
+
+Your Fetch Example with Event Loop
+1. Function1 calls fetch() → handed off to Web API
+2. Call Stack moves on
+3. Response arrives → callback goes to Promise Queue
+4. Event Loop checks Promise Queue FIRST (higher priority)
+5. Then checks Task Queue
+6. Pushes resolved callback onto Call Stack
+
