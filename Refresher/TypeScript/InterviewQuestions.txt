@@ -1,0 +1,127 @@
+1. What are the different types of Data types available in typescript?
+   Primitive: 
+   Number, String, Boolean, Null, undefined, Symbol any void
+   Null: is an empty value but it is some value
+   undefined: Used to declare a variable but dont knwo the value
+   any: anything 
+   void: return type for a function that does not return anything 
+   Non Primitive: 
+   1. Arrays: Store multiple values of the similar type.
+   2. enums: Multiple constant variables.
+   3. classes: Key-Value pairs
+   4. Interface: Basic syntax and Blueprint an entity must abide. 
+
+2. How many ways to declare a variable in typescript?
+   Let: Newer way to declare that allowed blocked-scope access.
+   var: old and global access. 
+   const: Value cannot change.
+
+3. How to explicitly decalre variables in typescript?
+   let username: string | number = "Atharv Joshi"
+
+4. How to declare functions with typed annotation in typescript?
+    function greeting(name:string):string{
+    return `Hello Mr/Mrs., Have a Good Day ! ${name}`
+    }
+    const username1: string="Atharv"
+    const username2: string="SomeGirl in the Future"
+    console.log(greeting(username1))
+    greeting(greeting(username2))
+
+5. Facing error in typescript where I had file1.ts and file2.ts having same variables. When a file has 
+   no import and export then typescrpit treats that as script and not module. With Script all the variables 
+   inside the script are treated as globally scoped.
+
+6. Disadvatages of typescript
+   -- No concept of Abstract classes
+   -- Compiling adds an extra layer of work 
+   -- Defination file needs to be added to make the external or third party libraries.
+
+7. What is the void datatype?
+   Void datatype is the unavailabilty of data type for any variable. An variable declared with void datatype
+   can only be either undefined or null. IMPORTANT !
+
+8. What are objects in typescript and show example with optional properties?
+   Collection of key-value pair is called object.Keys are required to be unique. 
+    let studentInfo:
+    {name: string,
+    age: number,
+    id: string|number,
+    isEnrolled: boolean,
+    feesPaid?:boolean
+    }={
+    name: "Atharv",
+    age: 23,
+    id: "AHY66GDDU2",
+    isEnrolled: true,
+    }
+
+    console.log(studentInfo);
+
+9. Explain Arrays in TypeScript and difference of that with javascript?
+   let name: string[]=["Atharva", "Adarsh", "Saurabh"]
+   let userid: number[]=[10, 11, 12] 
+
+10. How to compile the typescript?
+    tsc demo.ts
+    node-ts demo.ts --> This creates an Javascript file and then node demo.js to run. 
+
+11. In Operator in typescript
+    To check if an key(Property) exists in the object we can use the "in" operator. 
+    IMPORTANT: You can use Object.hasOwn() for a check that specifically looks for an own property 
+    and does not traverse the prototype chain. 
+
+12. What is Interface and Type in Ttypescript?
+    Interface → "What should this object look like?" (and it can evolve)
+    Type → "What name do I give this thing?" (and it's set in stone)
+    Look at the InterfaceAndType.ts file.
+    Both Interface and type explain the SHAPE OF DATA
+    let student={
+        name: "Atharv",
+        rollNo: 25
+    }
+    interface student{
+        name:string,
+        rollNo: number
+    }
+    type student={
+        name: string, 
+        rollno: number
+    }
+    Important Concept : Intersection used in types where as extends in Interface only
+    Use interface when:
+    You are describing objects
+    You are working with classes
+    You want declaration merging
+    You want cleaner object modeling
+    
+    Use type when:
+    You need unions
+    You need primitives
+    You need tuples
+    You need complex combinations
+    You’re building advanced type logic
+    
+    In modern TypeScript:
+    Use type for most things
+    Use interface for object shapes that might be extended
+
+Some teams even use only type.
+13. What are unions in Typescript?
+    type message="Error" | "Success"
+
+14. Whats BigInteger datatype in TypeScript?
+    const bigNumber: bigint = 9007199254740991n;
+    const hugeNumber = BigInt(9007199254740991); // Alternative syntax
+
+15. Whats Symbol datatype in typescript?
+    const uniqueKey: symbol=Symbol("Description")
+
+16. Whats explicit and implicit typing?
+    Explicit: You explicit declare of type/
+    Implicit: Automatically
+
+17.  
+
+
+

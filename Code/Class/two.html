@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interval Example</title>
+</head>
+
+<body>
+
+Hello World
+
+<p id="button">Click Me</p>
+
+<button id="button1">START BUTTON</button>
+<button id="button2">STOP BUTTON</button>
+
+<script>
+
+let intervalId;
+
+const startButton = document.querySelector("#button1");
+const stopButton = document.querySelector("#button2");
+
+startButton.addEventListener("click", () => {
+
+    intervalId = setInterval(() => {
+        console.log("Say hi to username Atharv");
+    }, 5000);
+
+});
+
+stopButton.addEventListener("click", () => {
+
+    clearInterval(intervalId);
+    console.log("Interval stopped");
+
+});
+
+</script>
+
+</body>
+</html>

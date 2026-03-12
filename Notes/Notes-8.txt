@@ -1,0 +1,31 @@
+1. FetchAPI() was added to the Node environment. 
+2. FetchAPI is the succesor of XMLHTTPRequest
+3. Why wasnt FetchAPI not added to the Node.js?
+Ans. Browsers FetchAPI implementation is dependent on the Browsers based Web Stream API and the AbortController interface. 
+4. fetch() global function: A global function that starts fetching the a resource from the network returning a promise which is fullfilled once the
+response is available. 
+5. A fetch() promise only rejects when a network error is encountered. A fetch() does not reject on HTTP errors(404, etc.). A .then must be used to 
+check the Response.ok abd ot Response.status properties. 
+6. We had discusses about tsending properties using Promise but how in the Fetch method?
+fetch("URL", {
+    method: 'GET',
+    body: new FormData()
+})                    
+-----------IMPORTANT------------
+1. We Noticed that the Fetch was called before all the promises with setInterval//setTimeOUt. Why?
+Due the presesnceo f micro queue/ Priority Queue. All the work from fetch goes to this Vip line called the micro queue/ Priority Queue. 
+Response= fetch('something')
+Data(Reserves a space in Memory/Heap Memory):- 
+onFullfilled[] -- Promise resolution
+onRejection[]
+You cannot access this Array. 
+
+Web Browser/Node API    (Access one of this)
+-
+- 
+Network Request.  (Either given by the Web Broswer or the Node API)
+Either this Request is accepted then it goes to onFullfilled else onRejection[].
+The Network request will fire either the onFullfilled[] or onRejection[]
+Based on the network request teh above arrays are given fucntions. 
+Data is defined in the Memory 
+If the data is fullfilled then given back to the Response in the Global Memory

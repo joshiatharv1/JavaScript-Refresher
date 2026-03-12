@@ -1,0 +1,33 @@
+Asynchrnous Programming: 
+1. https://www.youtube.com/watch?v=670f71LTWpM
+2. https://www.youtube.com/watch?v=Coyy79wRz_s
+3. https://www.youtube.com/watch?v=d3jXofmQm44
+4. https://www.youtube.com/watch?v=ZYb_ZU8LNxs
+5. https://www.youtube.com/watch?v=ZcQyJ-gxke0&list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu
+6. https://www.youtube.com/watch?v=OFpqvaJ3QYg
+
+Linux Programming: 
+1. https://www.youtube.com/watch?v=29eDuMjsEF8&t=11297s
+2. https://www.youtube.com/watch?v=YHFzr-akOas&list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As
+
+Networking fundamentals
+1. https://www.youtube.com/watch?v=JFF2vJaN0Cw&list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_
+
+Database: 
+1. https://www.youtube.com/watch?v=WXk7yDqsKxs
+2. https://www.youtube.com/watch?v=mXW7JHJM34k
+
+TypeScript: 
+1. https://www.youtube.com/watch?v=JHEB7RhJG1Y&t=11s
+2. https://www.youtube.com/watch?v=30LWjhZzg50&t=1911s
+
+React
+1. https://www.youtube.com/watch?v=FxgM9k1rg0Q&t=1817s
+2. https://www.youtube.com/watch?v=IdlF1zsUN3M&t=696s
+
+OpenTelemetry
+1. https://www.youtube.com/watch?v=r8UvWSX3KA8
+2. https://www.youtube.com/watch?v=cYAE0ZhT43c
+
+Tereform +Pulumi
+1. 

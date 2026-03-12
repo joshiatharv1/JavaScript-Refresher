@@ -1,0 +1,93 @@
+-- Promise: The Promise Object represents the eventual completion or failure of an asynchrnous operation and its resulting value.
+-- PROMISE IS AN OBJECT. 
+-- Not all tasks are completed immediately after being put in the queue. 
+-- Example: Reading File: Kernel Access required, Database realted queries and Cryptograhically realted operation
+-- Example: Opeing Camera in Mobile Applicaiton 
+-- Using the "New" keyword to create an opeator is Promises.
+-- BlueBird old library that was used previous to Library. 
+
+-- Promise States: 
+
+
+
+
+-- 1️⃣ fetch() returns a Promise
+
+When you call fetch(), it does not immediately return data.
+
+It returns a Promise that will resolve later with the response.
+
+Example:
+
+const response = fetch(url); // Promise
+2️⃣ Promises handle asynchronous operations
+
+Promises are used when a task takes time (API request, file reading, etc.).
+
+They allow JavaScript to continue running without blocking.
+
+3️⃣ .then() is used to handle resolved promises
+
+.then() runs after the Promise is fulfilled.
+
+Example:
+
+fetch(url).then(response => response.json())
+4️⃣ .catch() handles errors
+
+.catch() runs if the Promise fails or throws an error.
+
+Example:
+
+.catch(error => console.log(error))
+5️⃣ response.json() also returns a Promise
+
+Many beginners miss this.
+
+You need another .then() or await.
+
+Example:
+
+response.json()
+6️⃣ async functions allow await
+
+async makes a function automatically return a Promise.
+
+It allows the use of await.
+
+Example:
+
+async function getData() {}
+7️⃣ await pauses execution inside async functions
+
+await waits until the Promise resolves before moving forward.
+
+Example:
+
+const response = await fetch(url);
+8️⃣ async/await is syntactic sugar over Promises
+
+Internally JavaScript still uses Promises.
+
+async/await just makes the code cleaner and easier to read.
+
+9️⃣ try...catch replaces .catch() in async code
+
+In async/await, errors are handled using try–catch blocks.
+
+Example:
+
+try {
+   const data = await fetch(url);
+} catch(error) {
+   console.log(error);
+}
+🔟 fetch() only rejects on network errors
+
+fetch() does NOT fail on HTTP errors like 404 or 500.
+
+You must manually check:
+
+if(!response.ok){
+   throw new Error("Request failed");
+}

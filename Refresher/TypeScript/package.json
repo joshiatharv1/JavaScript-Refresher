@@ -1,0 +1,18 @@
+{
+  "name": "typescriptrefresher",
+  "version": "1.0.0",
+  "description": "An Package to keep revising TypeScript with interview questions",
+  "license": "ISC",
+  "author": "Atharv Joshi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "This is like Shell Scripting I guess",
+    "compile": "npx tsc"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

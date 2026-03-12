@@ -60,3 +60,24 @@ Your Fetch Example with Event Loop
 5. Then checks Task Queue
 6. Pushes resolved callback onto Call Stack
 
+setTimeout(function(){
+        console.log("Heello World")
+    }, 2000)
+
+--setTimeOut would wait for the 2 seconds and then run the function once only
+-- setInterval would keep running the function for every 2 seconds.
+
+Window Object is used to check the value of Key
+
+The XMLHttpRequest Object
+The XMLHttpRequest object can be used to request data from a web server.
+
+The XMLHttpRequest object is a developers dream, because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server  - after the page has loaded
+Send data to a server - in the background
+
+
+Understading the Console: Check the working from th v8 Engne open source 
