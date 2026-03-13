@@ -29,3 +29,255 @@ The Network request will fire either the onFullfilled[] or onRejection[]
 Based on the network request teh above arrays are given fucntions. 
 Data is defined in the Memory 
 If the data is fullfilled then given back to the Response in the Global Memory
+
+
+----------- OOPS in JavaScript ---------------
+1. Does JavaScript has Classes and Objects?
+   Programming Paradigms or diffrerent types of Programming ways- Functional or non funcitonal 
+2. JavaScript is an PROTOTYPE-based language. NOT OBJECT ORIENTED OR FUNCTIONAL 
+3. Classes are just an syntatic sugar over the prototype -based inheritance. 
+4. Whats OOPS?-- Its an style or way o Programming
+-- Collections of properties and methods. 
+-- Whats the need of OOPS ? -- Spageettti Code. 
+-------------------------------------------------------------------------------
+1. Object Literal: An object literal is the easiest way to create an object in JavaScript. You define key–value pairs inside {}.
+It is used when you need just one object and don’t need a reusable blueprint.
+
+Example
+const user = {
+  name: "Atharv",
+  age: 22,
+  greet: function() {
+    console.log("Hello " + this.name);
+  }
+};
+
+console.log(user.name);
+user.greet();
+Output
+Atharv
+Hello Atharv
+Key idea
+Object Literal = Direct object creation
+
+Structure:
+
+Object
+ ├── properties
+ └── methods
+2. Constructor Functions: When you need many objects with the same structure, writing object literals repeatedly is inefficient.
+A constructor function acts like a blueprint for objects.
+
+You use the new keyword to create objects.
+
+Example
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const user1 = new User("Atharv", 22);
+const user2 = new User("Rahul", 25);
+
+console.log(user1.name);
+console.log(user2.name);
+Output
+Atharv
+Rahul
+What new does internally
+
+When you write:
+
+new User("Atharv",22)
+
+JavaScript does:
+
+1️⃣ Creates empty object
+2️⃣ Links it to prototype
+3️⃣ this points to that object
+4️⃣ Returns the object
+
+Visualization
+User Constructor
+      │
+      ▼
+user1 object
+user2 object
+3️⃣ Prototype
+Theory
+
+JavaScript uses prototype-based inheritance.
+
+Every function automatically gets a prototype object.
+
+This allows sharing methods across objects instead of duplicating them.
+
+Without prototype:
+
+Every object copies the same method → waste memory
+
+With prototype:
+
+All objects share the same method
+Example
+function User(name) {
+  this.name = name;
+}
+
+User.prototype.sayHello = function() {
+  console.log("Hello " + this.name);
+};
+
+const user1 = new User("Atharv");
+const user2 = new User("Rahul");
+
+user1.sayHello();
+user2.sayHello();
+Output
+Hello Atharv
+Hello Rahul
+
+
+Prototype Chain
+user1
+  │
+  ▼
+User.prototype
+  │
+  ▼
+Object.prototype
+  │
+  ▼
+null
+
+If JS doesn't find a method in the object, it looks up the prototype chain.
+
+4️⃣ Classes (Modern Syntax):Classes were introduced in ES6 (2015). They are syntactic sugar over prototype-based inheritance.
+Class = Cleaner syntax for prototype
+Example
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log("Hello " + this.name);
+  }
+}
+
+const user1 = new User("Atharv", 22);
+user1.greet();
+Output
+Hello Atharv
+Under the hood
+
+This class:
+
+class User {}
+
+is actually converted to:
+
+function User() {}
+User.prototype.method = function(){}
+5️⃣ Instances (new and this)
+Theory
+
+An instance is an object created from a class or constructor.
+
+Example:
+
+class → blueprint
+instance → actual object
+Example
+class Car {
+  constructor(brand) {
+    this.brand = brand;
+  }
+
+  drive() {
+    console.log(this.brand + " is driving");
+  }
+}
+
+const car1 = new Car("Toyota");
+const car2 = new Car("Tesla");
+
+car1.drive();
+car2.drive();
+Output
+Toyota is driving
+Tesla is driving
+this keyword
+
+this refers to the current object instance.
+
+Example:
+
+console.log(this.brand);
+
+Means:
+
+Access the brand of the current object
+🧠 Full Evolution of JavaScript Object Creation
+1️⃣ Object Literal
+   const obj = {}
+
+2️⃣ Constructor Function
+   function User(){}
+
+3️⃣ Prototype
+   User.prototype.method
+
+4️⃣ Class (modern syntax)
+   class User {}
+
+5️⃣ Instance
+   new User()
+📊 Real World Analogy
+Class / Constructor → Car blueprint
+
+Instance → Actual car
+
+Prototype → Shared engine design
+
+this → Current car being used
+
+Example:
+
+Car Blueprint
+   │
+   ├── car1 (Tesla)
+   ├── car2 (Toyota)
+   └── car3 (BMW)
+🚀 Interview Tip
+
+A very common JavaScript interview question:
+
+Difference between:
+
+Object Literal
+vs
+Constructor Function
+vs
+Class
+
+Short answer:
+
+Type	Purpose
+Object Literal	One object
+Constructor Function	Many objects
+Prototype	Share methods
+Class	Modern cleaner syntax
+Instance	Actual object created
+
+
+
+
+
+
+
+
+
+
+-- 4 Pillars: Abstraction, Encapsulation, Inheritance, Polymorphism 

@@ -1,0 +1,22 @@
+1. Prototype : inheritace based behaviour in JavaScript, Keeps accessing the parent element/Object. 
+2. this, new and other keywords are working on this
+3. Prototypical Inheritance. 
+4. Array ----> Object ----> null
+   String ---->
+   All the properties that are given to array from Objects are also given to String
+5. What happens behind the scene when we use the New keyword:
+
+
+----------------------------------------------------------------
+Call and this in JavaScript:
+1. Call Stack has Functional Execution Context, and Global Execution Context
+2. When working on server the this keyword inside a fucntion that inturn belongs to another function refers to the Node.js Environment where
+   Global Object is an {}, Whereas in the Browser its an Window Object. 
+   This locally is {}
+   this on browser is window object. 
+   Function one(){
+      function two(){
+         this --> What does this keyword refer to ??
+      }
+   }
+   CHECK THE CLASS14.JS
