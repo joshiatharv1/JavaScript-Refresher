@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orangeButton">Orange</button>
+    <button id="greenButton">Green</button>
+</body>
+<script>
+    // Lexical Scoping 
+    // Here We can see that the Variable name is accessible to the child Method. 
+    // Thumb Rule: Child Can access parent properties and functions. 
+    // The Siblings cannot share the properties 
+    // The Parent cannot access the child properties or the fucntions. 
+    
+    // function init(){
+    //     let name="Mozzila";
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     displayName();
+    // }
+    // init()
+
+    function makeFunction(){
+        const name="Mozilla";
+        // Inner functions have the access to the parent properties. 
+        function displayName(){
+            console.log(name)
+        }
+        // You have passed the refrence to the function back as return. 
+        return displayName;
+    }
+    const myFunc=makeFunction();
+    // Since we have the refernce to the displayFucntion function storeed in the myFunc variable. 
+    // The complete lexical scopre of that fucntion would be returned back here including the varuable name and its value.  
+    // myFunc()
+    // ------------------------IMPORTANT USE CASE FOR LEXICAL SCOPING AND CLOSURE---------------------------------------------
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    // ---------------------------------------------------------------------------------------------------------------------
+    // const green=document.getElementById("greenButton").addEventListener('click', ()=>{
+    //     document.body.style.backgroundColor="Green"
+    // })
+    // const orange=document.getElementById("orangeButton").addEventListener('click', ()=>{
+    //     document.body.style.backgroundColor="Orange"
+    // })
+
+</script>
+</html>
