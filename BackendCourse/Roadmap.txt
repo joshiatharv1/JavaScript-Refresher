@@ -1,0 +1,21 @@
+RoadMap: 
+Server: Software that serves
+A Programming Language: Java, Python or JavaScript --> FrameWork like express or mongoose
+A Database: MongoDB, MySQL, PostGresql --> ORM or ODM
+Data. File, Third Party API's
+JavaScript Runtime: Node.js, Deno, Bun
+Folder Structure: 
+1. Index, App, Constants(Airplane Seats Types)
+2. DB, Models(Schema to send and recieve data), Controllers(Methods), Routes (API Routes), Middlewares
+3. Utils -- Utility (Repeatable function or work liek an Email utility. )
+4. More (Depends)
+
+---------------------------------------------------------------------------------------------------------
+1. Node.js Requirement for the environment. 
+2. 
+Mobile/Computer -------> Server
+                   GET
+Mobile/Computer <------- Server
+                 EXPRESS
+
+Listen, /: Home Route and /Login: Login Setup
