@@ -15,6 +15,14 @@ app.get('/', (request,response)=>{
 app.get('/login', (req,res)=>{
     res.send('<h1>Hi Welcome to the Login Page</h1>')
 })
+
+app.get('/user', (req, res)=>{
+    res.json({name: "Atharv Joshi", 
+        age :23, 
+        email:"atharv444joshi@gmail.com"
+    })
+})
+
 app.listen(port, ()=>{
     console.log(`Example App listening on Port ${port}`);
 })

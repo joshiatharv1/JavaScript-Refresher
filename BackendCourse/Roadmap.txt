@@ -19,3 +19,36 @@ Mobile/Computer <------- Server
                  EXPRESS
 
 Listen, /: Home Route and /Login: Login Setup
+3. Environment Variables in Digital Ocean are Local and Global
+4. App methods listen(), get(), 
+5. Response methods res.send(), res.json()
+6. Module and Comman.js are the two ways of assembling files in Node.js 
+   Module uses requires keyword.
+   Module uses the standard import and export 
+   You can define this under the Package.json under the "type":"Module", or "type":"Comman.js"
+   Module provides an asynchronous way of arranging the files. 
+-------------------------------------------------------------------------------------------------------------
+1. CORS Error: An error faced when two different services running on two different URL/Origins on different ports need to communicate. 
+   Solution: 
+   On Backend Side: 
+   Install the CORS Package and app.use(cors())
+   We have the ability to whitelist the URL from from there we want to recieve or reject data
+   If no cors that means anyone from any where can send multiple request to your endpoint to send data. 
+   On Frontend Side: 
+
+
+
+2. You should use Proxy to standardize the URL that you want to send or recive data from. For instance the www.atharvWeb.com/api/jokes might later 
+   become the www.atharvnewWebsite.com/api/jokes. 
+   To break this manual effort use proxies. 
+   If you made an simple React Application without any bundlers or toolkits like Vite
+   you can simply add an Property called the "proxy":"localhost:6000/api/jokes //"
+   
+   Otherwie look at the vite.config.js for this
+   export default defineConfig() method
+
+3. Sometimes we have code where we can run the command npm run build that will create an dist(Distribution Folder), this will create an static 
+version of all the react code. It will save devops and hosting and storage cost while hosting. 
+we use an middleware app.use(express.static('dist'))
+Express will tell the serve that serve the static folder with the server code.
+But this code is Static and any chnage made on the react code will not PROPOGATE. 
