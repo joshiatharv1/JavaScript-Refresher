@@ -52,3 +52,20 @@ version of all the react code. It will save devops and hosting and storage cost 
 we use an middleware app.use(express.static('dist'))
 Express will tell the serve that serve the static folder with the server code.
 But this code is Static and any chnage made on the react code will not PROPOGATE. 
+
+4. Mongoose: Framework to model and the Schema of Data to keep in the Database. MoonData Modeller and EraserModels to show visula relationsship and 
+even have the capbility to design the schema and generate the code. 
+-- Design the SignUP Page: What data do we require from the User:
+   Username
+   Email
+   Password
+   Date_of_Borth
+   BUTTON Register
+
+-- Login 
+   Email
+   Password
+
+Example To Do App:
+-- Youtube: content(String), markedAsDone(Boolean), creationDate(Date)
+-- Job: title ,CreateBy[User], subTodos. 
