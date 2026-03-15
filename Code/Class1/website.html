@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Even if we dont follow this strucuture of HTML code we could still run this HTML -->
+<html lang="en"> 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 | JavaScript Tutorial </title>
+    <style>
+        /* Button is the CSS Selector */
+        /* Syntax: Property and Value */
+        button{
+            background-color: yellow;
+            color: purple;
+            font-size: medium;
+        }
+        .orange-button{
+            background-color: orange;
+        }
+        </style>
+<!-- title="tooltip is an HTML Attribute" -->
+</head>
+<body>
+    <button title="Clicked First Button !" class="orange-button">First</button>
+    <button onclick="alert(`Clicked the Second Button !`)">Second</button>
+    <p>This text belongs inside <button>Hello Button</button> of the Paragraph Tag  </p>
+    <button id="Quantity">Show Quantity</button>
+    <button id="addCart">Add to Cart</button>
+    <button id="addTwo">+ 2</button>
+    <button id="addThree">+ 3</button>
+    <button id="Reset">Reset Cart</button>
+    <p>Your Current Value is </p>
+    <p id="display"></p>
+</body>
+<script>
+    let value=0;
+    let quantity=document.getElementById("Quantity").addEventListener('click', ()=>{
+        console.log("You Clicked"+ "Quanity")
+        console.log("Value is ", value);
+
+    })
+    document.getElementById("addCart").addEventListener('click', ()=>{
+        console.log("You Clicked Add to Cart")
+        value=value+1;
+        console.log("Value is ", value);
+    })
+    document.getElementById("addTwo").addEventListener('click', ()=>{
+        console.log("You Clicked add button two")
+        value=value+2;
+        console.log("Value is ", value);
+    })
+    document.getElementById("addThree").addEventListener('click', ()=>{
+        console.log("You Clicked button three")
+        value=value+3;
+        console.log("Value is ", value);
+    })
+    document.getElementById("Reset").addEventListener('click', ()=>{
+        console.log("You Clicked Reset")
+        value=0;
+        console.log("Value is ", value);
+    })
+    //  alert('This is a Demo Alert !')
+</script>
+</html>

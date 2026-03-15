@@ -1,0 +1,71 @@
+1. How many ways to create an Object in JavaScript?
+-- Using Object Literal
+-- Using the New Keyword
+-- Using the Consutructor only Object();
+-- Object.create()
+-- Function create
+--  function Person() {}
+    Person.prototype.name = "Sudheer";
+    var object = new Person();
+-- const Singleton = (function () {
+        
+    function createInstance() {
+    return { name: "Sudheer" };
+    }
+    
+    return {
+    getInstance: function () {
+    if (!instance) {
+    instance = createInstance();
+    }
+    return instance;
+    }
+    };
+    })();
+    
+    // Usage
+    const obj1 = Singleton.getInstance();
+    const obj2 = Singleton.getInstance();
+
+    console.log(obj1 === obj2); // true
+
+2. Call Method: 
+Rememeber as Fucnction Borrowing where we will use an function. The Values inside the functino will be given by the Object that is given as parameter to the call method. 
+let object11={
+    fname: "Atharv",
+    lname: "Joshi"
+}
+let object12={
+    fname: "Apurva",
+    lname: "Joshi"
+}
+let printMe=function(Para1, Para2){
+    console.log(`Name of Person is ${this.fname} ${this.lname}`)
+    console.log(`I have extra parameters as well ${Para1} and ${Para2}`)
+}
+
+printMe.apply(object12, ["India", "USA"])
+
+CALL is an Method that is available to all the methods in JavaScript. 
+Call() will call the Object given to it as parameter to provide the properties that are need by the function who him callled 
+METHOD -- Has Method Call Function -- Function Asks Object ---> it is given as parameter in Call(Parameter)
+Similarly: APPLY METHOOF
+is the Apply just that the extra parameters are sent as an Array
+
+BIND METHOD: 
+-- This will make everything come together (Object, Method and parameter) as one and return that as an method that can be called again. 
+let finalMethod=printMe.bind(object12, "India", "USA")
+finalMethod() ---> Same Result as above two; 
+Bind does not invoke immediately rather just gives us the copy that can be invoked later. 
+
+Important:
+## The Core Idea — Property Lookup Chain
+When you access a property on an object, JavaScript follows this rule:
+Step 1: Look in the object itself
+           ↓  (not found?)
+Step 2: Look in its prototype
+           ↓  (not found?)
+Step 3: Look in prototype's prototype
+           ↓  (not found?)
+Step 4: Reach null → return undefined
+In JavaScript, everything is an object and inheritance happens through this prototype chain linkage, making it purely prototypal by nature.  
